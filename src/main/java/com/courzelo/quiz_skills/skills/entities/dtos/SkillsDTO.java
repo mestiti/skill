@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class SkillsDTO {
     private String id;
+    private String iduser;
     @Enumerated(EnumType.STRING)
     private Type type;
     private List<MacroskillsDTO> macroskills;

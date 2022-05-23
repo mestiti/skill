@@ -42,7 +42,7 @@ public class SkillsBusiness implements IServiceSkills {
 
     //retouner les macros skills selon le type et le user
     @Override
-    public List<MacroskillsDTO> getmacroskills(int iduser, Type type) { //selon user id
+    public List<MacroskillsDTO> getmacroskills(String iduser, Type type) { //selon user id
         Skills skills = skillsrepository.findskillsByUser(iduser,type);
         List<MacroskillsDTO> l = new ArrayList<>();
        List<MacroskillsDTO> macro=  skills.getMacroskills().stream().map(macroskills->mapper.map(macroskills, MacroskillsDTO.class)).collect(Collectors.toList());
@@ -57,7 +57,7 @@ public class SkillsBusiness implements IServiceSkills {
         return l;}
 
     @Override
-    public List<MicroskillsDTO> getmicroskills(int iduser, String name, Type type) {
+    public List<MicroskillsDTO> getmicroskills(String iduser, String name, Type type) {
         List <MicroskillsDTO> l = new ArrayList<>();
             Skills skills = skillsrepository.findskillsByUser(iduser,type);
 

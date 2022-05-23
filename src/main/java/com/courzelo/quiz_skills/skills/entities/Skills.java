@@ -17,7 +17,7 @@ import java.util.List;
 public class Skills {
 	@Id
 	private String id;
-
+	private String iduser;
 	@Enumerated(EnumType.STRING)
 	private Type type;
     private List<Macroskills> macroskills;

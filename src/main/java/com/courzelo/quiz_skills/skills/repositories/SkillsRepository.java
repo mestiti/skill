@@ -16,6 +16,6 @@ import com.courzelo.quiz_skills.skills.entities.Skills;
 public interface SkillsRepository extends MongoRepository<Skills, String>{
 
     @Query("{iduser: ?0, type: ?1}")
-    Skills findskillsByUser(int iduser, Type type); //trouver sol pour type
+    Skills findskillsByUser(String iduser, Type type); //trouver sol pour type
 
 }

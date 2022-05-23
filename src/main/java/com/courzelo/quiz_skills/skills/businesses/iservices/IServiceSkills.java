@@ -11,7 +11,7 @@ import java.util.List;
 public interface IServiceSkills {
 
     public SkillsDTO getskillbyid(String id);
-    public List<MacroskillsDTO> getmacroskills(int id, Type type);
-    public List<MicroskillsDTO> getmicroskills(int iduser, String name, Type type);
+    public List<MacroskillsDTO> getmacroskills(String id, Type type);
+    public List<MicroskillsDTO> getmicroskills(String iduser, String name, Type type);
 
 }
